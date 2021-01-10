@@ -84,9 +84,10 @@ namespace Networks2020
         
         
 
-        Network pride1819Network = new Network(//dates,
-                //"G://CLASSROOMS_OLD//PRIDE_LEAP//PRIDE_LEAP_AM//SYNC//PAIRACTIVITY_ALL_5PRIDE_LEAP_AM_5_31_2020_1136973128ALL.CSV",
-                "G://CLASSROOMS_OLD//PRIDE_LEAP//PRIDE_LEAP_AM//SYNCT1HACK//PAIRACTIVITY_ALL_5PRIDE_LEAP_AM_7_2_2020_779521743ALL.CSV",
+        Network pride1819Network = new Network(//dates,//PAIRACTIVITY_ALL_5PRIDE_LEAP_AM_5_19_2020_2019412578ALL.CSV
+                "G:\\CLASSROOMS_OLD\\PRIDE_LEAP\\PRIDE_LEAP_AM\\SYNC\\PAIRACTIVITY_ALL_6PRIDE_LEAP_AM_10_26_2020_478216537ALL.CSV",
+                //"G:\\CLASSROOMS_OLD\\PRIDE_LEAP\\PRIDE_LEAP_AM\\SYNC\\PAIRACTIVITY_ALL_5PRIDE_LEAP_AM_5_19_2020_2019412578ALL.CSV",
+                //"G://CLASSROOMS_OLD//PRIDE_LEAP//PRIDE_LEAP_AM//SYNCT1HACK//PAIRACTIVITY_ALL_5PRIDE_LEAP_AM_7_2_2020_779521743ALL.CSV",
                 "G://CLASSROOMS_OLD//PRIDE_LEAP//PRIDE_LEAP_AM//MAPPING_PRIDE_LEAP_AM_BASE.CSV",
                  colsNodes.Count>0? colsNodes: new List<int>() { 27, 28 },//19 },//27, 28 },//19},   // 19 PairBlockTalking   26  26
                  colsEdges.Count > 0 ? colsEdges : new List<int>() { 27, 28 },// 19 },//27, 28 },//19},
@@ -286,20 +287,34 @@ namespace Networks2020
             colorAssignments.Add("DELAY", "#ffff00");
             colorAssignments.Add("OTHERS", "#ffff00");
 
-            getPride1819_LEAPAM(true, true, true, 2500, 350, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> { 29 }, new List<int> { 29 }, 42);
-            getPride1920_LEAPAM(true, true, true, 2500, 350, new List<int> { 26, 27 }, new List<int> { 26, 27 }, new List<int> { 28 }, new List<int> { 28 }, 41);
+            //TESTING
+            getPride1819_LEAPAM(true, false, false, 1500, 120, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> { }, new List<int> { }, 42);
 
+
+
+
+
+            getPride1920_REVMAM(true, false, false, 8500, 650, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> { }, new List<int> { }, 42);
+
+            getPride1920_LEAPAM(true, false, false, 1500, 120, new List<int> { 26, 27 }, new List<int> { 26, 27 }, new List<int> { }, new List<int> { }, 41);
             getPride1920_LEAPPM(true, false, false, 1500, 120, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> { }, new List<int> { }, 42);
-
              
+
+            getPride1819_REVMAM(true, false, false, 2500, 350, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> { }, new List<int> { }, 42);
+            getPride1819_LEAPPM(true, false, false, 1500, 120, new List<int> { 26, 27 }, new List<int> { 26, 27 }, new List<int> { }, new List<int> { }, 41);
+            getPride1819_LEAPAM(true, false, false, 1500, 120, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> { }, new List<int> { }, 42);
+
+            //  getPride1819_LEAPAM(true, true, true, 2500, 350, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> { 29 }, new List<int> { 29 }, 42);
+            //   getPride1920_LEAPAM(true, true, true, 2500, 350, new List<int> { 26, 27 }, new List<int> { 26, 27 }, new List<int> { 28 }, new List<int> { 28 }, 41);
+
+            // getPride1920_LEAPPM(true, false, false, 1500, 120, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> { }, new List<int> { }, 42);
+
+
             getPride1819_LEAPAM(true, false, false, 2500, 350, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> {}, new List<int> {}, 42);
             getPride1819_LEAPPM(true, false, false, 2500, 350, new List<int> { 26, 27 }, new List<int> { 26, 27 }, new List<int> { }, new List<int> { }, 41);
             getPride1819_REVMAM(true, false, false, 2500, 350, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> { }, new List<int> { }, 42);
 
-            getPride1920_LEAPAM(true, false, false, 2500, 350, new List<int> { 26, 27 }, new List<int> { 26, 27 }, new List<int> {}, new List<int> {}, 41);
-            getPride1920_LEAPPM(true, false, false, 2500, 350, new List<int> { 26, 27 }, new List<int> { 26, 27 }, new List<int> { }, new List<int> { }, 41);
-            getPride1920_REVMAM(true, false, false, 2500, 350, new List<int> { 27, 28 }, new List<int> { 27, 28 }, new List<int> { }, new List<int> { }, 42);
-
+             
         }
     }
 }

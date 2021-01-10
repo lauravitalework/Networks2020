@@ -33,6 +33,7 @@ namespace Networks2020
             int id1 = Convert.ToInt16(Regex.Match(szid1, @"\d+\.*\d*").Value);
             return szid1.Contains("LAB") || szid1.Contains("L" + id1.ToString());
         }
+
         public String toXml()
         {
             return "node\n\t[\n\t\troot_index\t-" + numId + "\n\t\tid\t-" + numId
@@ -45,12 +46,14 @@ namespace Networks2020
         }
         public String toXml(double nodeMult)
         {
+            //Regex.Replace(phoneNumber, @"[^\d]", "")
             return "node\n\t[\n\t\troot_index\t-" + numId + "\n\t\tid\t-" + numId
                               + "\n\t\tgraphics\n\t\t[\n\t\t\tx\t" + 0 + "\n\t\t\ty\t" + 0
                               + "\n\t\t\th\t" + (size * nodeMult) + "\n\t\t\tw\t" + (size * nodeMult) + "\n\t\t\tfill\t\""
                               + szColor + "\"\n\t\t\ttype\t\"ellipse\"\n\t\t\toutline\t\"" + "#000000"
                               + "\"\n\t\t\toutline_width\t" + "2.0" + "\n\t\t]\n\t\tlabel\t\""
-                              + szOriginalId + "\"\n\t]";
+                              +  szOriginalId + "\"\n\t]";
+                                //+  Regex.Replace(szOriginalId, @"[^\d]", "")  + "\"\n\t]";
 
         }
     }

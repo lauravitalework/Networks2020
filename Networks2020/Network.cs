@@ -239,7 +239,7 @@ namespace Networks2020
                         }
                         else if (includeTeachers && szSubjectType.StartsWith("C") && szPartnerType.StartsWith("T"))
                         {
-                            if(!szShortIdP.Contains("T1"))//t1 hack delete debug
+                            if(true)//!szShortIdP.Contains("T1"))//t1 hack delete debug
                             include = true;
                             else
                                 include = false;
